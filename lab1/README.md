@@ -6,7 +6,11 @@ Notas Sobre Guião 1:
 .see atributtes of POM (can be too much)
 .dependencies for artifacts
 .artifacts might require other dependencies forming a graph
-
+.adicionar este código à base que o VS dá:
+ <properties>
+    <maven.compiler.source>19</maven.compiler.source>
+    <maven.compiler.target>19</maven.compiler.target>
+  </properties>
 Maven Commands:
 $mvn package #get dependencies, compiles the project and creates the jar
 $mvn exec:java -Dexec.mainClass="weather.WeatherStarter" #adapt to match your own 
@@ -14,12 +18,6 @@ package structure and class name
 CheatSheet Maven Commands- https://www.digitalocean.com/community/tutorials/maven-commands-options-cheat-sheet
 
 -Run with arguments: mvn exec:java -Dexec.mainClass=test.Main -Dexec.args="arg1 arg2 arg3"
-
-GitHub:
-
-
-
-
 
 Docker: 
 A container is a sandboxed process running on a host machine that is isolated from all other processes running on that host machine.
@@ -48,3 +46,4 @@ A container is a sandboxed process running on a host machine that is isolated fr
 - docker compose run web env -> run one-off commands against a service
 
 -docker compose down --volumes -> can bring everything down, removing the containers entirely, with the down command. Pass --volumes to also remove the data volume used by the Redis container.
+

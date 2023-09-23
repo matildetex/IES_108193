@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    volumes:
+      - .:/code
+    environment:
+      FLASK_DEBUG: "true"
+  redis:
+    image: "redis:alpine"
+
+##Volume-> allows to modify the code on the fly, without having to rebuild the image. 
+##Environment key-> tells flask run to run in development mode and reload the code on change.
+##Model used on development
+
