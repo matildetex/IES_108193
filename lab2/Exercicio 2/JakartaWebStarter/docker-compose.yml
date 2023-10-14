@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    image: your-custom-tomcat-image
+    ports:
+      - "8080:8080"
+    networks:
+      - your-network
+  database:
+    image: your-database-image:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: your-root-password
+      MYSQL_DATABASE: your-database-name
+    networks:
+      - your-network
+networks:
+  your-network:
